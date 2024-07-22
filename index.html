@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Audio API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <button class="play">StartSynth</button>
+    <br>
+
+    <button class="sine">Sine</button>
+    <button class="square">Square</button> 
+    <button class="triangle">Triangle</button> 
+    <button class="sawtooth">SawTooth</button> 
+
+    <div class="slider-container">
+        <label for="slider">Volume</label>
+        <input type="range" id="slider" name="slider" min="0" max="100" value="50" oninput="updateValue(this.value)">
+        <span id="sliderValue"></span>
+    </div>
+
+
+    <br>
+    <div class="form-container">
+    <form id="metronomeForm">
+        <label for="tempo">Tempo:</label>
+        <input type="number" id="tempo" name="tempo" min="40" max="240" value="120" required> (BPM)
+        <br>
+        <label for="timeSignature">Time Signature:</label>
+        <select id="timeSignature" name="timeSignature">
+            <option type = "number" value= "2">2</option>
+            <option type = "number"value= "3">3</option>
+            <option type = "number" value= "4">4</option>
+        </select> / 4
+        <br><br>
+        <button type="StartBtotton">Start</button>
+    </form>
+        <button class="stopButton">Stop</button>
+    </div>
+
+    <script src="./main.js"></script>
+    <script src="./metronome.js"></script>
+
+    <footer>
+        <p>&copy; 2024 Larry Chang. All rights reserved.</p>
+    </footer>
+</body>
+</html>
