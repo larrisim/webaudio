@@ -3,7 +3,7 @@ class Circle {
         this.x = x;
         this.y = y;
         this.radius = radius;
-        this.growthRate = 1; // Pixels per frame
+        this.growthRate = 1.6; // Pixels per frame
     }
 
     update() {
